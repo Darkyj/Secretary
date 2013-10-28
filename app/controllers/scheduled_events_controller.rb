@@ -4,4 +4,5 @@ class ScheduledEventsController < ApplicationController
 
   def show
   end
+
 end
