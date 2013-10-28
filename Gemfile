@@ -35,6 +35,8 @@ end
 #For twitter bootstrap
 # gem 'bootstrap-sass'
 
+#simple form for validation
+gem 'simple_form'
 
 #visual tables on console
 gem 'hirb'
