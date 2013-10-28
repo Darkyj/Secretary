@@ -32,6 +32,13 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+#For twitter bootstrap
+gem 'bootstrap'
+
+
+#visual tables on console
+gem 'hirb'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -42,4 +49,12 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+group :development do
+	gem 'better_errors'
+	gem 'binding_of_caller'
+	gem 'meta_request'
+	gem 'rails-footnotes', '>= 3.7.9'
+end
+
+#gem 'debugger'#, group: [:development, :test]
+
