@@ -33,7 +33,7 @@ group :doc do
 end
 
 #For twitter bootstrap
-gem 'bootstrap'
+# gem 'bootstrap-sass'
 
 
 #visual tables on console
