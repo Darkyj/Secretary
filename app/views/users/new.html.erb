@@ -1,0 +1,18 @@
+<% if flash[:errors] %>
+	<% flash[:errors].each do |error| %>
+		<p><%= error %></p>
+	<% end %>
+<% end %>
+<% if flash[:success] %>
+	<p><%= flash[:success] %></p>
+<% end %>
+
+<%= simple_form_for @user, html: {class: 'form-horizontal col-md-6'} do |f|%>
+	<%= f.input :first_name, label: "First name" %>
+	<%= f.input :last_name, label: "Last name" %>
+	<%= f.input :email_address, label: "Email" %>
+	<%= f.input :password, label: "Password" %>
+	<%= f.input :password_confirmation, label: "Confirm Password" %>
+	<%= f.input :phone_number, label: "Phone Number, numbers only please." %>
+	<%= f.button :submit, value: "Register", class: 'btn btn-primary' %>
+<% end %>

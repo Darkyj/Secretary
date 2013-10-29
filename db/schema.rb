@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131028171111) do
+ActiveRecord::Schema.define(version: 20131029195314) do
 
   create_table "scheduled_reminders", force: true do |t|
     t.string   "title"
@@ -28,11 +28,11 @@ ActiveRecord::Schema.define(version: 20131028171111) do
   create_table "users", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "password_diget"
     t.string   "email_address"
     t.integer  "phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 end
