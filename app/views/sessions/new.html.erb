@@ -2,9 +2,9 @@
 <% if flash[:error] %>
 	<p><%= flash[:error] %></p>
 <% end %>
-
-<%= simple_form_for(:session, url: sessions_path) do |f| %>
-	<%= f.input :email_address, placeholder: "Email" %>
-	<%= f.input :password, placeholder: "Password" %>
-	<%= f.button :submit, value: "Sign In" %>
+<%= render "layouts/navbar" %>
+<%= simple_form_for @user, url: sessions_path, html: {class: 'form-horizontal col-md-6'} do |form_field| %>
+	<%= form_field.input :email_address, label: 'Email' %>
+	<%= form_field.input :password, label: 'Passowrd' %>
+	<%= form_field.button :submit, value:'Log In', class: "btn btn-primary" %>
 <% end %>
