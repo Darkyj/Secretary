@@ -27,14 +27,14 @@ class SessionsController < ApplicationController
 	# end
 
   def create
-  	user = User.find_by(email_address: params[:user][:email]).try(:authenticate, params[:user][:password])
+  	user = User.find_by(email_address: params[:user][:email_address]).try(:authenticate, params[:user][:password])
   	if user == false || user.nil?
   		redirect_to new_session_path, flash: { message: "Incorrect email/password" }
   	else
   		sign_in(user)
   		redirect_to user_path(user)
   	end
-  end
+  end 
 
   def new
     if signed_in?
