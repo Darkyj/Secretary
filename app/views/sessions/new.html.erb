@@ -1,10 +1,10 @@
 
-<% if flash[:error] %>
-	<p><%= flash[:error] %></p>
+<% if flash[:message] %>
+	<p><%= flash[:message] %></p>
 <% end %>
 <%= render "layouts/navbar" %>
 <%= simple_form_for @user, url: sessions_path, html: {class: 'form-horizontal col-md-6'} do |form_field| %>
 	<%= form_field.input :email_address, label: 'Email' %>
-	<%= form_field.input :password, label: 'Passowrd' %>
+	<%= form_field.input :password, label: 'Password' %>
 	<%= form_field.button :submit, value:'Log In', class: "btn btn-primary" %>
 <% end %>
