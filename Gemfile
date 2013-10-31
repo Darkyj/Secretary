@@ -44,6 +44,10 @@ gem 'hirb'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem "simple_calendar", "~> 0.1.9"
+
+gem 'table_builder'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
