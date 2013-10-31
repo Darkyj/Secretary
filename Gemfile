@@ -48,6 +48,9 @@ gem "simple_calendar", "~> 0.1.9"
 
 gem 'table_builder'
 
+# Twilio api gem
+require 'twilio-ruby'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

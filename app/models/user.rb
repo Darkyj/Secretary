@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	has_many :scheduled_events
+	has_many :scheduled_reminders
 
 	EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]+)\z/i
 
