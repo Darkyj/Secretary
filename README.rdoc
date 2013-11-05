@@ -1,28 +1,16 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version 2.1.0
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
+* Rails version 4.0
 
 * Configuration
 
-* Database creation
+* Database SQLite3
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Services: This application uses the gem 'delayed_job_active_record', and to utilize this gem. You will need to use the command: 'rake jobs:work' in your application's folder to start the job queue.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+I was inspired to create this application by my wife. She tends to lose track of things as we most often do with our busy lives.
+
+Currently this application can only text a number that has been hard coded into the scheduled reminder's model. I plan on making it more dynamic as I go as this application can actually go pretty far in terms of stuff I want to play around with. 
