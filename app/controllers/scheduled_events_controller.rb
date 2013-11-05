@@ -6,9 +6,9 @@ class ScheduledEventsController < ApplicationController
   end
 
   def create
-
   	@event = current_user.scheduled_reminders.new(events_params)
   	if @event.save
+      ScheduledReminder.delay(queue: "scheduled_reminders", priority: 20, run_at: @event.start_time).deliver(@event.id)
   		redirect_to scheduled_event_path(current_user)
   	else
   		render :new
@@ -20,6 +20,7 @@ class ScheduledEventsController < ApplicationController
   	if !signed_in?
   		redirect_to new_session_path
   	end
+    @events = current_user.scheduled_reminders.all
   end
 
   private
