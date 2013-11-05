@@ -70,3 +70,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
 end
+
+gem 'daemon'
+gem 'delayed_job_active_record'
+

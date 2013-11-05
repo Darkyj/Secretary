@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   end
 
   def settings
+
   end
 
   def edit

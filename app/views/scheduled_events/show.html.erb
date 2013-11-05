@@ -1,4 +1,24 @@
 <!-- TO DO CALENDER NEEDS TO GO HERE -->
 
+<div class="col-md-6 col-md-offset-2">
+	<table class="table table-bordered">
+			<tr>
+				<td>Title</td>
+				<td>Description</td>
+				<td>End Time</td>
+			</tr>			
+		<% @events.each do |event| %>
+			<tr>
+				<td><%=	event.title %></td>
+				<td><%= event.description %></td>
+				<td><%= (event.end_time).localtime.strftime( "%b, %d, %Y %I:%M%p") %></td>
+			</tr>
+		<% end %>
+	</table>
+</div>
 
-<%= link_to "Log out", session_path(current_user), method: "delete" %>
+<div>
+	<%= link_to "Schedule a reminder", new_scheduled_event_path %> <br>
+
+	<%= link_to "Log out", session_path(current_user), method: "delete" %>
+</div>
